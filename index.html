@@ -36,6 +36,45 @@
       box-shadow: 0 14px 38px rgba(90,66,35,.11);
       overflow: hidden;
     }
+
+    .door-hero {
+      margin: 0 auto 26px;
+      padding: 10px;
+      text-align: center;
+      border: 1px solid var(--gold-soft);
+      border-radius: 16px;
+      background: rgba(255,253,247,.82);
+      box-shadow: 0 6px 18px rgba(90,66,35,.08);
+    }
+    .door-hero h2 {
+      margin: 5px 0 14px;
+      color: #67492d;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(25px, 5vw, 38px);
+      line-height: 1.3;
+    }
+    .door-hero img {
+      display: block;
+      width: 100%;
+      max-height: 690px;
+      object-fit: cover;
+      object-position: center 40%;
+      border-radius: 10px;
+    }
+    .topic-block {
+      margin: 18px 0;
+      padding: 20px;
+      border: 1px solid var(--gold-soft);
+      border-radius: 14px;
+      background: rgba(255,253,247,.72);
+    }
+    .topic-title {
+      margin: 0 0 12px;
+      text-align: center;
+      color: #67492d;
+      font-size: clamp(19px, 3vw, 23px);
+    }
+
     .top-symbol { color: var(--gold); font-size: 23px; letter-spacing: 7px; text-align: center; }
     h1 {
       margin: 0 auto 5px;
@@ -135,17 +174,174 @@
     .banner-caption { text-align: center; font-size: 12px; color: var(--muted); margin: 0; }
     .closing { margin-top: 24px; }
     .blessing { text-align: center; font-weight: 700; color: #76552d; font-size: clamp(17px, 2.7vw, 21px); margin: 20px 0 0; }
+
+    .home-glimpse {
+      margin: 34px 0 12px;
+      padding-top: 24px;
+      border-top: 1px solid var(--gold-soft);
+    }
+    .home-glimpse h2 {
+      text-align: center;
+      color: #67492d;
+      font-size: clamp(23px, 4vw, 31px);
+      line-height: 1.4;
+      margin: 0 0 5px;
+    }
+    .home-glimpse .gallery-subtitle {
+      text-align: center;
+      color: var(--muted);
+      margin: 0 0 20px;
+      font-size: 15px;
+    }
+    .glimpse-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .glimpse-card {
+      margin: 0;
+      overflow: hidden;
+      border: 1px solid var(--gold-soft);
+      border-radius: 13px;
+      background: rgba(255,253,247,.86);
+      box-shadow: 0 5px 16px rgba(90,66,35,.08);
+    }
+    .glimpse-card img {
+      display: block;
+      width: 100%;
+      height: 245px;
+      object-fit: cover;
+      background: #eee4d0;
+    }
+    .glimpse-card figcaption {
+      padding: 10px 12px;
+      text-align: center;
+      color: #67492d;
+      font-weight: 700;
+      font-size: 15px;
+    }
+    .glimpse-card.wide { grid-column: 1 / -1; }
+    .glimpse-card.wide img { height: 290px; object-fit: cover; }
+
     @media (max-width: 620px) {
       body { padding: 9px 6px; }
       .invitation { padding: 29px 16px; border-radius: 12px; }
+      .door-hero { padding: 7px; }
+      .door-hero img { max-height: 560px; object-fit: cover; }
+      .topic-block { padding: 16px 12px; }
       .events { grid-template-columns: 1fr; }
       .event { padding: 16px 12px; }
       .intro, .closing { text-align: left; }
       .venue { padding: 15px 7px; }
+
+      .glimpse-grid { grid-template-columns: 1fr; gap: 12px; }
+      .glimpse-card.wide { grid-column: auto; }
+      .glimpse-card img, .glimpse-card.wide img { height: auto; max-height: 420px; object-fit: contain; }
+
       .timer { gap: 5px; }
       .time-unit { padding: 9px 2px 6px; }
       .time-unit span { font-size: 9px; letter-spacing: .5px; }
     }
+
+    .home-gallery {
+      margin: 34px 0 12px;
+      padding-top: 26px;
+      border-top: 1px solid var(--gold-soft);
+    }
+    .home-gallery h2 {
+      text-align: center;
+      color: #67492d;
+      font-size: clamp(23px, 4vw, 30px);
+      margin: 0 0 5px;
+    }
+    .home-gallery .gallery-subtitle {
+      text-align: center;
+      color: var(--muted);
+      margin: 0 0 20px;
+      font-size: 15px;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .gallery-card {
+      overflow: hidden;
+      border: 1px solid var(--gold-soft);
+      border-radius: 13px;
+      background: rgba(255,253,247,.82);
+      box-shadow: 0 5px 16px rgba(90,66,35,.08);
+    }
+    .gallery-card img {
+      display: block;
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+    }
+    .gallery-card:first-child { grid-column: 1 / -1; }
+    .gallery-card:first-child img { height: 350px; object-fit: cover; }
+    .gallery-card figcaption {
+      padding: 9px 12px;
+      text-align: center;
+      color: #75552f;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .home-glimpse {
+      margin: 34px 0 12px;
+      padding-top: 24px;
+      border-top: 1px solid var(--gold-soft);
+    }
+    .home-glimpse h2 {
+      text-align: center;
+      color: #67492d;
+      font-size: clamp(23px, 4vw, 31px);
+      line-height: 1.4;
+      margin: 0 0 5px;
+    }
+    .home-glimpse .gallery-subtitle {
+      text-align: center;
+      color: var(--muted);
+      margin: 0 0 20px;
+      font-size: 15px;
+    }
+    .glimpse-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .glimpse-card {
+      margin: 0;
+      overflow: hidden;
+      border: 1px solid var(--gold-soft);
+      border-radius: 13px;
+      background: rgba(255,253,247,.86);
+      box-shadow: 0 5px 16px rgba(90,66,35,.08);
+    }
+    .glimpse-card img {
+      display: block;
+      width: 100%;
+      height: 245px;
+      object-fit: cover;
+      background: #eee4d0;
+    }
+    .glimpse-card figcaption {
+      padding: 10px 12px;
+      text-align: center;
+      color: #67492d;
+      font-weight: 700;
+      font-size: 15px;
+    }
+    .glimpse-card.wide { grid-column: 1 / -1; }
+    .glimpse-card.wide img { height: 290px; object-fit: cover; }
+
+    @media (max-width: 620px) {
+      .gallery-grid { grid-template-columns: 1fr; }
+      .gallery-card:first-child { grid-column: auto; }
+      .gallery-card img, .gallery-card:first-child img { height: auto; max-height: 480px; object-fit: contain; background: #f5eddd; }
+    }
+
     @media print {
       body { background: white; padding: 0; }
       .invitation { box-shadow: none; width: 100%; border-radius: 0; }
@@ -155,6 +351,11 @@
 </head>
 <body>
   <main class="invitation">
+    <section class="door-hero">
+      <h2>House Warming Ceremony</h2>
+      <img src="housewarming-door.jpeg" alt="Our home entrance decorated with traditional marigold and jasmine garlands">
+    </section>
+
     <header>
       <div class="top-symbol">✦ ❀ ✦</div>
       <h1>కొల్లి వారి గృహప్రవేశ ఆహ్వానము</h1>
@@ -162,12 +363,15 @@
       <div class="ornament">❧ ✧ ❧</div>
     </header>
 
-    <p class="intro">
-      శ్రీ సత్యనారాయణ స్వామి వారి దివ్య ఆశీస్సులతో మా ఇంటి ఆరోగ్యం, ఐశ్వర్యం,
-      సుఖశాంతులు ఎల్లప్పుడూ నిండాలని కోరుకుంటూ మా గృహప్రవేశ వేడుకకు
-      మిమ్మల్ని సాదరంగా ఆహ్వానిస్తున్నాము.
-    </p>
+    <section class="topic-block">
+      <p class="intro">
+        శ్రీ సత్యనారాయణ స్వామి వారి దివ్య ఆశీస్సులతో మా ఇంటి ఆరోగ్యం, ఐశ్వర్యం,
+        సుఖశాంతులు ఎల్లప్పుడూ నిండాలని కోరుకుంటూ మా గృహప్రవేశ వేడుకకు
+        మిమ్మల్ని సాదరంగా ఆహ్వానిస్తున్నాము.
+      </p>
+    </section>
 
+    <section class="topic-block">
     <section class="hosts" aria-label="ఆహ్వానించువారు">
       <div class="hosts-label">ఆహ్వానించువారు</div>
       <div class="host-name">కొల్లి గోపాలస్వామి &amp; రజని</div>
@@ -175,6 +379,7 @@
       <div style="margin:8px 0 2px">మరియు</div>
       <div class="host-name">కుమార్తె – భావన</div>
       <div class="english">Kolli Bhavana</div>
+    </section>
     </section>
 
     <section class="countdown" aria-live="polite">
@@ -191,6 +396,8 @@
 
     <div class="ornament">✦ ───────── ✦ ───────── ✦</div>
 
+    <section class="topic-block">
+      <h2 class="topic-title">వేడుకల వివరాలు · Event Details</h2>
     <section class="events" aria-label="వేడుకల వివరాలు">
       <article class="event">
         <h2>🏠 గృహప్రవేశం<br><span class="english">Gruhapravesam</span></h2>
@@ -203,7 +410,9 @@
         <p><span class="detail-label">🕣 TIME</span><br><span class="detail-value">Morning 8:30 AM onwards</span></p>
       </article>
     </section>
+    </section>
 
+    <section class="topic-block">
     <section class="venue">
       <h2>📍 VENUE</h2>
       <p>
@@ -213,17 +422,50 @@
       </p>
       <a class="direction-link" href="https://www.google.com/maps/search/?api=1&amp;query=2nd%20Floor%2C%20201%2C%20NagaSai%20H%20K%20Towers%2C%20Sakthi%20Kalyana%20Mandapam%20Road%2C%20Opp%20PVR%20Icon%20Road%2C%20Prasadam%20Padu" target="_blank" rel="noopener">📍 Get Direction</a>
     </section>
+    </section>
 
-    <div class="lunch">🍽️ Lunch: Starts from 11:30 AM onwards</div>
+    <section class="topic-block">
+      <h2 class="topic-title">భోజన వసతి · Lunch</h2>
+      <div class="lunch">🍽️ Starts from 11:30 AM onwards</div>
+    </section>
 
-    <p class="closing">
-      మీరు కుటుంబ సమేతంగా విచ్చేసి మా శుభకార్యాన్ని మీ ఆశీస్సులతో మరింత
-      ఆనందదాయకం చేయవలసిందిగా మనస్ఫూర్తిగా కోరుకుంటున్నాము.
-    </p>
-    <p class="blessing">మీ రాకే మా ఆనందం – మీ ఆశీస్సులే మా బలం! 🙏</p>
+    <section class="topic-block">
+      <p class="closing">
+        మీరు కుటుంబ సమేతంగా విచ్చేసి మా శుభకార్యాన్ని మీ ఆశీస్సులతో మరింత
+        ఆనందదాయకం చేయవలసిందిగా మనస్ఫూర్తిగా కోరుకుంటున్నాము.
+      </p>
+    </section>
 
     <img class="attached-banner" src="event-details-banner.jpeg" alt="Housewarming invitation date, time and ceremony design">
     <p class="banner-caption">వేడుక వివరాల అలంకార చిత్రం</p>
+
+    <section class="home-gallery" aria-label="Glimpse of our new home">
+      <h2>🏡 Glimpse of Our New Home</h2>
+      <p class="gallery-subtitle">మా కొత్త ఇంటి కొన్ని అందమైన ఝలక్‌లు</p>
+      <div class="gallery-grid">
+        <figure class="gallery-card">
+          <img src="home-glimpse-1.jpeg" alt="Elegant housewarming invitation keepsake with a golden key">
+          <figcaption>New Home, New Memories</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <img src="home-glimpse-2.jpeg" alt="Main entrance decorated with traditional flower garlands">
+          <figcaption>Welcome to Our Home</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <img src="home-glimpse-3.jpeg" alt="Decorative Venkateswara Swamy shrine">
+          <figcaption>Our Sacred Space</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <img src="home-glimpse-4.jpeg" alt="Modern living room interior">
+          <figcaption>Living Room</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <img src="home-glimpse-5.jpeg" alt="Modern kitchen with sage green cabinets">
+          <figcaption>Kitchen</figcaption>
+        </figure>
+      </div>
+    </section>
+
     <div class="ornament" style="margin-top:24px">❧ ✧ ❧</div>
   </main>
 
