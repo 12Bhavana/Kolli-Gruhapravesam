@@ -1,77 +1,254 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="te">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#173a25">
-<title>కొల్లి వారి గృహప్రవేశ ఆహ్వానము</title>
-<style>
-*{box-sizing:border-box}
-:root{--green:#173a25;--gold:#d9b96d;--cream:#fff8e8;--ink:#2e2416}
-body{margin:0;background:#f4e7cd;color:var(--cream);font-family:"Noto Serif Telugu","Nirmala UI","Gautami",serif}
-.hero{min-height:100vh;display:grid;place-items:center;padding:24px 12px;background:linear-gradient(#1b281b30,#102a1dcc),url("invitation-background.jpeg") center/cover fixed}
-.card{width:min(900px,100%);padding:clamp(18px,4vw,42px);border:2px solid var(--gold);outline:1px solid #f7e4ad;outline-offset:-9px;background:linear-gradient(135deg,#173a25f2,#102b1ff5);box-shadow:0 15px 55px #0008;text-align:center}
-.om{font-size:30px;color:var(--gold);margin:0 0 8px}
-h1{font-size:clamp(27px,5.8vw,48px);line-height:1.5;color:#ffe8a7;margin:5px 0 12px;font-weight:700}
-.intro{font-size:clamp(15px,2.5vw,19px);line-height:2;color:#fff8e8;margin:14px auto;max-width:760px}
-.host{font-size:clamp(17px,3vw,24px);line-height:1.8;color:#ffe8a7;font-weight:700}
-.sub{font:600 12px Arial,sans-serif;letter-spacing:.13em;color:#f4d78f;text-transform:uppercase;margin:18px 0 10px}
-.events{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px auto;max-width:780px}
-.event{border:1px solid var(--gold);background:#fff8e810;padding:17px 12px;border-radius:10px}
-.event-title{font-size:clamp(17px,2.8vw,23px);font-weight:700;color:#ffe8a7;line-height:1.8}
-.meta{display:flex;align-items:center;justify-content:center;gap:7px;flex-wrap:wrap;margin-top:10px;font-size:clamp(14px,2.5vw,17px);line-height:1.8}
-.pill{display:inline-flex;align-items:center;gap:6px;border:1px solid #e4c879;background:#f5df9b;color:#183a25;padding:7px 10px;border-radius:7px;font-weight:700}
-.address{font-size:15px;line-height:2;color:#fff8e8;margin:6px auto}
-.lunch{display:inline-block;margin:16px auto 5px;padding:12px 18px;background:#f5df9b;color:#173a25;border:2px solid #fff0bd;border-radius:9px;font-size:clamp(16px,3vw,21px);font-weight:800;box-shadow:0 4px 18px #0003}
-.actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:18px 0 6px}
-.btn{display:inline-flex;align-items:center;gap:8px;justify-content:center;background:var(--gold);color:#173a25;text-decoration:none;border:1px solid #ffedb8;border-radius:7px;padding:13px 17px;font:700 13px Arial,sans-serif;cursor:pointer}
-.btn.alt{background:transparent;color:#fff8e8}
-.small{font:12px/1.7 Arial,sans-serif;color:#eadbb8}
-@media(max-width:560px){.hero{background-attachment:scroll;padding:12px 8px}.events{grid-template-columns:1fr;gap:10px}.event{padding:13px}.card{padding:22px 16px}.intro{line-height:1.9}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f7f0df">
+  <title>కొల్లి వారి గృహప్రవేశ ఆహ్వానము</title>
+  <style>
+    :root {
+      --cream: #f7f0df;
+      --cream-light: #fffaf0;
+      --gold: #a98542;
+      --gold-soft: #d8c394;
+      --ink: #49372b;
+      --muted: #756453;
+      --white: rgba(255, 253, 247, .82);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 20px 12px;
+      color: var(--ink);
+      font-family: "Noto Serif Telugu", "Nirmala UI", "Gautami", Georgia, serif;
+      background: linear-gradient(145deg, #f0e6d1, var(--cream) 48%, #faf5e8);
+      line-height: 1.75;
+    }
+    .invitation {
+      width: min(100%, 900px);
+      margin: 0 auto;
+      padding: clamp(20px, 4.8vw, 52px);
+      border: 1px solid var(--gold-soft);
+      outline: 1px solid rgba(169,133,66,.22);
+      outline-offset: -8px;
+      border-radius: 18px;
+      background: rgba(255, 251, 242, .9);
+      box-shadow: 0 14px 38px rgba(90,66,35,.11);
+      overflow: hidden;
+    }
+    .top-symbol { color: var(--gold); font-size: 23px; letter-spacing: 7px; text-align: center; }
+    h1 {
+      margin: 0 auto 5px;
+      color: #65462a;
+      font-size: clamp(27px, 5vw, 42px);
+      line-height: 1.45;
+      text-align: center;
+    }
+    .shree { text-align: center; color: var(--gold); font-size: 20px; margin: 5px 0 12px; }
+    .ornament { color: var(--gold); letter-spacing: 5px; text-align: center; margin: 8px 0 18px; }
+    .intro, .closing { text-align: center; font-size: clamp(16px, 2.5vw, 19px); }
+    .hosts { text-align: center; margin: 22px 0; }
+    .hosts-label { color: var(--gold); font-weight: 700; font-size: 18px; }
+    .host-name { font-size: clamp(18px, 3vw, 22px); font-weight: 700; }
+    .english { font-family: Georgia, "Times New Roman", serif; font-size: 15px; color: var(--muted); }
+    .countdown {
+      margin: 24px 0 26px;
+      padding: 22px 14px;
+      border: 1px solid var(--gold-soft);
+      border-radius: 16px;
+      text-align: center;
+      background: linear-gradient(135deg, #f4ead0, #fffaf0);
+    }
+    .countdown h2 { margin: 0 0 4px; font-size: clamp(20px, 3vw, 27px); color: #765324; }
+    .countdown .sub { margin: 0 0 15px; color: var(--muted); }
+    .timer { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 9px; max-width: 550px; margin: 0 auto; }
+    .time-unit {
+      border: 1px solid #dfcca0;
+      border-radius: 11px;
+      padding: 10px 4px 7px;
+      background: rgba(255,255,255,.7);
+    }
+    .time-unit strong { display: block; font-family: Arial, sans-serif; font-size: clamp(23px, 4vw, 34px); line-height: 1.25; color: #765324; }
+    .time-unit span { display: block; font-family: Arial, sans-serif; font-size: 11px; letter-spacing: 1px; font-weight: 700; color: #786a58; text-transform: uppercase; }
+    .countdown-note { margin: 13px 0 0; font-size: 14px; color: var(--muted); }
+    .events {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin: 24px 0;
+    }
+    .event {
+      border: 1px solid var(--gold-soft);
+      border-radius: 14px;
+      padding: 18px 15px;
+      text-align: center;
+      background: var(--white);
+    }
+    .event h2 { font-size: clamp(17px, 2.5vw, 21px); line-height: 1.5; margin: 0 0 12px; color: #67492d; }
+    .event p { margin: 7px 0; font-size: 16px; }
+    .detail-label { color: #805b24; font-weight: 800; }
+    .detail-value { font-weight: 700; }
+    .venue {
+      margin: 22px auto 14px;
+      padding: 18px;
+      max-width: 650px;
+      text-align: center;
+      border-top: 1px solid var(--gold-soft);
+      border-bottom: 1px solid var(--gold-soft);
+    }
+    .venue h2 { margin: 0 0 8px; font-size: 21px; color: #67492d; letter-spacing: 2px; }
+    .venue p { margin: 0; font-family: Georgia, "Times New Roman", serif; line-height: 1.65; }
+    .direction-link {
+      display: inline-block;
+      margin-top: 14px;
+      padding: 10px 21px;
+      border: 1px solid var(--gold);
+      border-radius: 24px;
+      color: #67492d;
+      text-decoration: none;
+      background: #f4e8c8;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+    }
+    .lunch {
+      text-align: center;
+      margin: 20px auto;
+      max-width: 560px;
+      padding: 14px 18px;
+      border: 1px solid #c8a65c;
+      border-radius: 12px;
+      background: #f0e2bb;
+      color: #60451f;
+      font-size: 18px;
+      font-weight: 800;
+    }
+    .attached-banner {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin: 26px auto 8px;
+      border-radius: 14px;
+      border: 1px solid #e2d4b5;
+      box-shadow: 0 6px 18px rgba(90,66,35,.08);
+    }
+    .banner-caption { text-align: center; font-size: 12px; color: var(--muted); margin: 0; }
+    .closing { margin-top: 24px; }
+    .blessing { text-align: center; font-weight: 700; color: #76552d; font-size: clamp(17px, 2.7vw, 21px); margin: 20px 0 0; }
+    @media (max-width: 620px) {
+      body { padding: 9px 6px; }
+      .invitation { padding: 29px 16px; border-radius: 12px; }
+      .events { grid-template-columns: 1fr; }
+      .event { padding: 16px 12px; }
+      .intro, .closing { text-align: left; }
+      .venue { padding: 15px 7px; }
+      .timer { gap: 5px; }
+      .time-unit { padding: 9px 2px 6px; }
+      .time-unit span { font-size: 9px; letter-spacing: .5px; }
+    }
+    @media print {
+      body { background: white; padding: 0; }
+      .invitation { box-shadow: none; width: 100%; border-radius: 0; }
+      .direction-link { display: none; }
+    }
+  </style>
 </head>
 <body>
-<main class="hero">
-<article class="card">
-<div class="om">🙏 ॐ 🙏</div>
-<h1>కొల్లి వారి గృహప్రవేశ ఆహ్వానము</h1>
-<div class="om">॥ శ్రీ ॥</div>
-<p class="intro">శ్రీ సత్యనారాయణ స్వామి వారి దివ్య ఆశీస్సులతో మా ఇంటి ఆరోగ్యం, ఐశ్వర్యం, సుఖశాంతులు ఎల్లప్పుడూ నిండాలని కోరుకుంటూ మా గృహప్రవేశ వేడుకకు మిమ్మల్ని సాదరంగా ఆహ్వానిస్తున్నాము.</p>
+  <main class="invitation">
+    <header>
+      <div class="top-symbol">✦ ❀ ✦</div>
+      <h1>కొల్లి వారి గృహప్రవేశ ఆహ్వానము</h1>
+      <div class="shree">|| శ్రీ ||</div>
+      <div class="ornament">❧ ✧ ❧</div>
+    </header>
 
-<div class="sub">ఆహ్వానించువారు</div>
-<div class="host">కొల్లి గోపాలస్వామి &amp; రజని</div>
-<div class="host" style="font-size:16px">మరియు కుమార్తె – భావన</div>
+    <p class="intro">
+      శ్రీ సత్యనారాయణ స్వామి వారి దివ్య ఆశీస్సులతో మా ఇంటి ఆరోగ్యం, ఐశ్వర్యం,
+      సుఖశాంతులు ఎల్లప్పుడూ నిండాలని కోరుకుంటూ మా గృహప్రవేశ వేడుకకు
+      మిమ్మల్ని సాదరంగా ఆహ్వానిస్తున్నాము.
+    </p>
 
-<div class="events">
-  <section class="event">
-    <div class="event-title">🏠 గృహప్రవేశం</div>
-    <div class="meta"><span class="pill">📅 ఆదివారం · 22 నవంబర్ 2026</span></div>
-    <div class="meta"><span class="pill">🕗 రాత్రి 8:48 గంటలకు</span></div>
-  </section>
-  <section class="event">
-    <div class="event-title">🙏 శ్రీ సత్యనారాయణ స్వామి వ్రతం</div>
-    <div class="meta"><span class="pill">📅 సోమవారం · 23 నవంబర్ 2026</span></div>
-    <div class="meta"><span class="pill">🕣 ఉదయం 8:30 గంటల నుంచి</span></div>
-  </section>
-</div>
+    <section class="hosts" aria-label="ఆహ్వానించువారు">
+      <div class="hosts-label">ఆహ్వానించువారు</div>
+      <div class="host-name">కొల్లి గోపాలస్వామి &amp; రజని</div>
+      <div class="english">Kolli Gopalaswamy &amp; Rajani</div>
+      <div style="margin:8px 0 2px">మరియు</div>
+      <div class="host-name">కుమార్తె – భావన</div>
+      <div class="english">Kolli Bhavana</div>
+    </section>
 
-<div class="sub">📍 వేదిక</div>
-<div class="address">2nd Floor, 201, NagaSai H K Towers,<br>Sakthi Kalyana Mandapam Road,<br>Opp PVR Icon Road, Prasadam Padu.</div>
-<div class="lunch">🍽️ భోజన వసతి · Lunch starts at 11:30 AM onwards</div>
+    <section class="countdown" aria-live="polite">
+      <h2>🏡 Countdown to Our New Home</h2>
+      <p class="sub">గృహప్రవేశ వేడుకకు ఇంకా</p>
+      <div class="timer">
+        <div class="time-unit"><strong id="days">--</strong><span>Days</span></div>
+        <div class="time-unit"><strong id="hours">--</strong><span>Hours</span></div>
+        <div class="time-unit"><strong id="minutes">--</strong><span>Minutes</span></div>
+        <div class="time-unit"><strong id="seconds">--</strong><span>Seconds</span></div>
+      </div>
+      <p class="countdown-note" id="countdown-note">Sunday, 22 November 2026 · 8:48 PM IST</p>
+    </section>
 
-<p class="intro">మీరు కుటుంబ సమేతంగా విచ్చేసి మా శుభకార్యాన్ని మీ ఆశీస్సులతో మరింత ఆనందదాయకం చేయవలసిందిగా మనస్ఫూర్తిగా కోరుకుంటున్నాము.</p>
-<div class="host">🙏 మీ రాకే మా ఆనందం – మీ ఆశీస్సులే మా బలం! 🙏</div>
-<div class="actions">
-<a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=2nd%20Floor%2C%20201%2C%20NagaSai%20H%20K%20Towers%2C%20Sakthi%20Kalyana%20Mandapam%20Road%2C%20Opp%20PVR%20Icon%20Road%2C%20Prasadam%20Padu" target="_blank" rel="noopener">📍 Google Maps లో మార్గం చూడండి</a>
-<button class="btn alt" id="music" type="button">♫ స్వాగత సంగీతం వినండి</button>
-</div>
-<p class="small">సంగీతం వినడానికి బటన్‌ను నొక్కండి.</p>
-</article>
-</main>
-<script>
-let ctx=null, nodes=[], playing=false;
-function stop(){nodes.forEach(n=>{try{n.stop()}catch(e){}});nodes=[];if(ctx){ctx.close();ctx=null}playing=false;document.getElementById('music').textContent='♫ స్వాగత సంగీతం వినండి'}
-document.getElementById('music').addEventListener('click',async()=>{if(playing){stop();return}try{ctx=new(window.AudioContext||window.webkitAudioContext)();await ctx.resume();let master=ctx.createGain();master.gain.value=.04;master.connect(ctx.destination);[392,493.88,587.33,783.99].forEach((f,i)=>{let o=ctx.createOscillator(),g=ctx.createGain();o.type='sine';o.frequency.value=f;g.gain.setValueAtTime(.0001,ctx.currentTime);g.gain.exponentialRampToValueAtTime(.25/(i+1),ctx.currentTime+.25);g.gain.exponentialRampToValueAtTime(.0001,ctx.currentTime+2.5);o.connect(g);g.connect(master);o.start();o.stop(ctx.currentTime+2.8);nodes.push(o)});playing=true;document.getElementById('music').textContent='♫ సంగీతం ఆపండి';setTimeout(()=>{if(playing)stop()},3200)}catch(e){alert('సంగీతం ప్రారంభం కాలేదు. మళ్లీ ప్రయత్నించండి.')}});
-</script>
+    <div class="ornament">✦ ───────── ✦ ───────── ✦</div>
+
+    <section class="events" aria-label="వేడుకల వివరాలు">
+      <article class="event">
+        <h2>🏠 గృహప్రవేశం<br><span class="english">Gruhapravesam</span></h2>
+        <p><span class="detail-label">📅 DATE</span><br><span class="detail-value">Sunday, 22 November 2026</span></p>
+        <p><span class="detail-label">🕗 TIME</span><br><span class="detail-value">Night 8:48 PM</span></p>
+      </article>
+      <article class="event">
+        <h2>🙏 శ్రీ సత్యనారాయణ స్వామి వ్రతం<br><span class="english">Sri Satyanarayana Swamy Vratam</span></h2>
+        <p><span class="detail-label">📅 DATE</span><br><span class="detail-value">Monday, 23 November 2026</span></p>
+        <p><span class="detail-label">🕣 TIME</span><br><span class="detail-value">Morning 8:30 AM onwards</span></p>
+      </article>
+    </section>
+
+    <section class="venue">
+      <h2>📍 VENUE</h2>
+      <p>
+        2nd Floor, 201, NagaSai H K Towers,<br>
+        Sakthi Kalyana Mandapam Road,<br>
+        Opp PVR Icon Road, Prasadam Padu.
+      </p>
+      <a class="direction-link" href="https://www.google.com/maps/search/?api=1&amp;query=2nd%20Floor%2C%20201%2C%20NagaSai%20H%20K%20Towers%2C%20Sakthi%20Kalyana%20Mandapam%20Road%2C%20Opp%20PVR%20Icon%20Road%2C%20Prasadam%20Padu" target="_blank" rel="noopener">📍 Get Direction</a>
+    </section>
+
+    <div class="lunch">🍽️ Lunch: Starts from 11:30 AM onwards</div>
+
+    <p class="closing">
+      మీరు కుటుంబ సమేతంగా విచ్చేసి మా శుభకార్యాన్ని మీ ఆశీస్సులతో మరింత
+      ఆనందదాయకం చేయవలసిందిగా మనస్ఫూర్తిగా కోరుకుంటున్నాము.
+    </p>
+    <p class="blessing">మీ రాకే మా ఆనందం – మీ ఆశీస్సులే మా బలం! 🙏</p>
+
+    <img class="attached-banner" src="event-details-banner.jpeg" alt="Housewarming invitation date, time and ceremony design">
+    <p class="banner-caption">వేడుక వివరాల అలంకార చిత్రం</p>
+    <div class="ornament" style="margin-top:24px">❧ ✧ ❧</div>
+  </main>
+
+  <script>
+    // Countdown target: 22 November 2026, 8:48 PM Indian Standard Time (UTC+05:30)
+    const target = new Date("2026-11-22T20:48:00+05:30").getTime();
+    const $ = id => document.getElementById(id);
+    function updateCountdown() {
+      const remaining = target - Date.now();
+      if (remaining <= 0) {
+        ["days", "hours", "minutes", "seconds"].forEach(id => $(id).textContent = "00");
+        $("countdown-note").textContent = "గృహప్రవేశ వేడుక ప్రారంభమైంది! 🙏";
+        return;
+      }
+      const days = Math.floor(remaining / 86400000);
+      const hours = Math.floor((remaining % 86400000) / 3600000);
+      const minutes = Math.floor((remaining % 3600000) / 60000);
+      const seconds = Math.floor((remaining % 60000) / 1000);
+      $("days").textContent = String(days).padStart(2, "0");
+      $("hours").textContent = String(hours).padStart(2, "0");
+      $("minutes").textContent = String(minutes).padStart(2, "0");
+      $("seconds").textContent = String(seconds).padStart(2, "0");
+    }
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  </script>
 </body>
 </html>
